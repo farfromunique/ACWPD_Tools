@@ -5,6 +5,7 @@
  * 
  * This is version 1.0
  * 
+ * For the latest version, please visit: https://github.com/farfromunique/ACWPD_Tools
  * 
  * This code is copyright (C) 2015 Aaron Coquet / ACWPD
  */ 

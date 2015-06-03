@@ -16,8 +16,12 @@
  */
 
 // Put site's address here, in format "http://sub.domain.tld/path/to/root"
-var sRoot = document.location.origin; // This is the default
+var sRoot = document.location.origin; // Default: document.location.origin
+var siteName = "::SiteName::";
 
+function adjustMyURL(displayURL) {
+	window.history.pushState({site:sRoot}, siteName, "/" + displayURL + "/");
+}
 
 function loadMyPage(pageName, displayURL, targetDiv) {
 	var ajax;
@@ -30,7 +34,7 @@ function loadMyPage(pageName, displayURL, targetDiv) {
 		}
 	};
 	ajax.send(null);
-	window.history.pushState({site:"::SiteName::"}, "", "/" + displayURL + "/");
+	adjustMyURL(displayURL);
 }
 
 function postToPage(pageName, displayURL, postData) {
@@ -45,7 +49,7 @@ function postToPage(pageName, displayURL, postData) {
 	};
 	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	ajax.send(postData);
-	window.history.pushState({site:"::SiteName::"}, "", "/" + displayURL + "/");
+	adjustMyURL(displayURL);
 }
 
 function postAndRedirect(pageName, displayURL, postData, redirectTo) {
@@ -60,7 +64,7 @@ function postAndRedirect(pageName, displayURL, postData, redirectTo) {
 	};
 	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	ajax.send(postData);
-	window.history.pushState({site:"::SiteName::"}, "", "/" + displayURL + "/");
+	adjustMyURL(displayURL);
 }
 
 function DismissImportant() {

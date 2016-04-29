@@ -2,11 +2,11 @@
  * Provides ajax tools for ACWPD Projects
  * Feel free to use this in your projects! Just provide Attribution by keeping this block in place!
  * 
- * This is version 1.0
+ * This is version 1.1
  * 
  * For the latest version, please visit: https://github.com/farfromunique/ACWPD_Tools
  * 
- * This code is copyright (C) 2015 Aaron Coquet / ACWPD
+ * This code is copyright (C) 2016 Aaron Coquet / ACWPD
  */ 
  
 /* 
@@ -21,6 +21,14 @@ var siteName = "::SiteName::";
 
 function adjustMyURL(displayURL) {
 	window.history.pushState({site:sRoot}, siteName, "/" + displayURL + "/");
+}
+
+document.onreadystatechange = function() { 
+	if (document.readyState === 4) { // Document is fully loaded
+		document.querySelector('.class').onclick = function() {
+			//do stuff
+		}
+	}
 }
 
 function loadMyPage(pageName, displayURL, targetDiv) {

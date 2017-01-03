@@ -3,11 +3,11 @@
 /* Provides parsing tools for ACWPD Projects
  * Feel free to use this in your projects! Just provide Attribution by keeping this block in place!
  * 
- * This is version 1.0
+ * This is version 1.1
  * 
  * For the latest version, please visit: https://github.com/farfromunique/ACWPD_Tools
  * 
- * This code is copyright (C) 2015 Aaron Coquet / ACWPD
+ * This code is copyright (C) 2016 Aaron Coquet / ACWPD
  */ 
  
 class Parser {
@@ -39,7 +39,7 @@ class Parser {
 
     public function buildOutput($pageName) {
         ob_start();
-        require_once($pageName);
+        require($pageName);
         $output = ob_get_contents();
         ob_end_clean();
         return $output;

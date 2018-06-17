@@ -1,5 +1,13 @@
-# ACWPD_Tools
+# ACWPD Tools
 Useful Tools (php and JS) for ACWPD projects (or your own!)
 
 # Usage
-Copy the file you want to your own directory, and start using the functions.
+    composer install acwpd/tools
+
+...and then refence the tool you want to use:  
+* JsonToTable  
+  -     $table = new ACWPD\Tools\JsonTotable($JSON);
+        // then
+        $html = $table->build();
+		// or ...
+		echo $table;

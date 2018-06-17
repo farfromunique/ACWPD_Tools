@@ -1,0 +1,28 @@
+{
+	"name": "acwpd/tools",
+	"description": "Uesful PHP tools for PHP projects",
+	"type": "library",
+
+	"license": "MIT",
+	"authors": [ {
+		"name": "Aaron Coquet",
+		"email": "aaron@acwpd.com"
+    } ],
+	"require": {},
+	"require-dev": {
+		"phpunit/phpunit": "^7.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"ACWPD\\Tools\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"ACWPD\\Tools\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": "phpunit --bootstrap vendor/autoload.php tests"
+	}
+}

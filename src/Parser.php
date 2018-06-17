@@ -1,13 +1,15 @@
 <?php
-	
+
+namespace ACWPD\Tools;
+
 /* Provides parsing tools for ACWPD Projects
  * Feel free to use this in your projects! Just provide Attribution by keeping this block in place!
  * 
- * This is version 1.1
+ * This is version 1.2
  * 
  * For the latest version, please visit: https://github.com/farfromunique/ACWPD_Tools
  * 
- * This code is copyright (C) 2016 Aaron Coquet / ACWPD
+ * This code is copyright (C) 2018 Aaron Coquet / ACWPD
  */ 
  
 class Parser {

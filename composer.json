@@ -1,7 +1,7 @@
 {
 	"name": "acwpd/tools",
 	"description": "Uesful PHP tools for PHP projects",
-	"version": "0.1.0-dev",
+	"version": "0.1.0",
 	"type": "library",
 	"license": "MIT",
 	"authors": [ {

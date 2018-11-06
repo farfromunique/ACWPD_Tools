@@ -66,12 +66,12 @@ class Parser {
         $matches = [];
         $patterns = [
             'scheme' => '/^(\w+):\/\//',
-            'user' => '\/\/(\w+)[:@]',
-            'pass' => ':(\w+)@',
-            'host' => '(?:(?::\/\/)|@)([\w\.]+)(?:\/|$)',
-            'path' => '\w(\/(?:\w)+|\/)',
-            'query' => '\w\?((?:\w|\&|=)+)[#\/!]?\w*$',
-            'fragment' => '#((?:\w)+)'
+            'user' => '/\/\/(\w+)[:@]/',
+            'pass' => '/:(\w+)@/',
+            'host' => '/(?:(?:\/\/)|@)([\w\.]+)(?:\/|$)/',
+            'path' => '/\w(\/(?:\w)+|\/)/',
+            'query' => '/\w\?((?:\w|\&|=)+)[#\/!]?\w*$/',
+            'fragment' => '/#((?:\w)+)/'
         ];
         foreach ($patterns as $name => $pattern) {
             \preg_match($pattern,$URI,$matches);

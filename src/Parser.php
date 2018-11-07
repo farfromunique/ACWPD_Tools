@@ -60,29 +60,6 @@ class Parser {
         }
         return array_values($site_array);
     }
-
-    public function parseURI(string $URI): array {
-        $out = [];
-        $matches = [];
-        $patterns = [
-            'scheme' => '/^(\w+):\/\//',
-            'user' => '/\/\/(\w+)[:@]/',
-            'pass' => '/:(\w+)@/',
-            'host' => '/(?:(?:\/\/)|@)([\w\.]+)(?:\/|$)/',
-            'path' => '/\w(\/(?:\w)+|\/)/',
-            'query' => '/\w\?((?:\w|\&|=)+)[#\/!]?\w*$/',
-            'fragment' => '/#((?:\w)+)/'
-        ];
-        foreach ($patterns as $name => $pattern) {
-            \preg_match($pattern,$URI,$matches);
-            if( isset($matches[1])) {
-                $out[$name] = $matches[1];
-            } else {
-                $out[$name] = '';
-            }
-        }
-        return $out;
-    }
 }
 
 ?>

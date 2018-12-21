@@ -18,7 +18,7 @@ class DbErrorChecker {
 	 * @return string
 	 * @throws Exception
 	 **/
-	static public function CheckPrepared(\PDO $db, \PDOStatement $stmt) : array {
+	static public function CheckPrepared(\PDO $db, \PDOStatement $stmt) {
 		$NoError = '00000';
 		$res = $stmt->execute();
 		$err = $stmt->errorInfo();
